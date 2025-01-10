@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { Member } from '../models/member';
+import { GraphContainerComponent } from '../graph/graph-container/graph-container.component';
 
 @Component({
   selector: 'app-documents-graph',
-  imports: [CommonModule],
+  imports: [CommonModule, GraphContainerComponent],
   templateUrl: './documents-graph.component.html',
   styleUrl: './documents-graph.component.scss',
 })

@@ -1,0 +1,69 @@
+.graph-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  width: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos suaves */
+}
+
+.graph-item:hover {
+  transform: scale(1.1); /* Aumenta el tamaño del nodo */
+  cursor: pointer;
+}
+
+.person-icon {
+  width: 100px;
+  height: 100px;
+  transition: fill 0.3s ease, transform 0.3s ease; /* Transición para el SVG */
+}
+
+.node-background {
+  fill: #f5e9d9; /* Beige suave */
+  stroke: #4b3a29; /* Marrón oscuro */
+  stroke-width: 2;
+  transition: fill 0.3s ease, stroke 0.3s ease; /* Efecto de colores al pasar el mouse */
+}
+
+.graph-item:hover .node-background {
+  fill: #c6a87d; /* Oro desgastado */
+  stroke: #8a7a5e; /* Verde olivo suave */
+}
+
+.person-shape {
+  fill: #4b3a29; /* Marrón oscuro */
+  transition: fill 0.3s ease; /* Cambio de color al pasar el mouse */
+}
+
+.graph-item:hover .person-shape {
+  fill: #fffdf8; /* Blanco cremoso */
+}
+
+.person-details {
+  margin-top: 10px;
+  transition: color 0.3s ease; /* Cambios en el texto al pasar el mouse */
+}
+
+.person-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4b3a29; /* Marrón oscuro */
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.graph-item:hover .person-name {
+  color: #c6a87d; /* Oro desgastado */
+}
+
+.person-title {
+  font-size: 0.8rem;
+  color: #8a7a5e; /* Verde olivo suave */
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.graph-item:hover .person-title {
+  color: #fffdf8; /* Blanco cremoso */
+}

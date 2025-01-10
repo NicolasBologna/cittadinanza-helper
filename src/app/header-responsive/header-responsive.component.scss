@@ -32,6 +32,7 @@
 .red-span {
   background-color: #ff0000;
 }
+
 .green-span {
   background-color: #008000;
 }
@@ -61,7 +62,7 @@
 .menu-desktop {
   display: flex;
   list-style: none;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(245, 233, 217, 0.8); /* Beige suave translúcido */
   z-index: 1000;
   padding: 10px 0;
   transition: all 0.3s ease; /* Transición suave para el hover */
@@ -70,14 +71,14 @@
 }
 
 .menu-desktop:hover {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(245, 233, 217, 1); /* Beige suave sólido */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 .menu-desktop li a {
   text-decoration: none;
-  color: #4b3a29;
+  color: #4b3a29; /* Marrón oscuro */
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px; /* Bordes redondeados */
@@ -85,12 +86,12 @@
 }
 
 .menu-desktop li a:hover {
-  color: #c6a87d;
+  color: #c6a87d; /* Oro desgastado */
 }
 
 .menu-desktop li a.disabled-link {
   pointer-events: none; /* Hace que no sean clickeables */
-  color: #b8afa5; /* Color gris claro */
+  color: #b8afa5; /* Gris suave */
   cursor: not-allowed; /* Cursor de "no permitido" */
   padding: 10px 15px;
   border-radius: 5px;
@@ -102,7 +103,7 @@
   top: -100%;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(245, 233, 217, 0.95); /* Beige suave translúcido */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: top 0.5s ease;
@@ -125,14 +126,18 @@
 
 .menu-mobile li a {
   text-decoration: none;
-  color: #007bff;
+  color: #4b3a29; /* Marrón oscuro */
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+.menu-mobile li a:hover {
+  color: #8a7a5e; /* Verde olivo suave */
+}
+
 .menu-mobile li a.disabled-link {
   pointer-events: none;
-  color: #bbb;
+  color: #b8afa5; /* Gris suave */
   cursor: not-allowed;
 }
 
@@ -145,12 +150,17 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: #4b3a29; /* Marrón oscuro */
 }
 
+.close-btn:hover {
+  color: #c6a87d; /* Oro desgastado */
+}
+
+/* Links deshabilitados */
 .disabled-link {
   pointer-events: none;
-  color: #bbb;
+  color: #b8afa5; /* Gris suave */
   cursor: not-allowed;
 }
 
@@ -164,7 +174,7 @@
   }
 
   .menu-desktop {
-    display: none; /* Muestra el menú desplegable */
+    display: none; /* Oculta el menú completo en móviles */
   }
 }
 
@@ -174,7 +184,7 @@
   }
 
   .menu-mobile {
-    display: none; /* Oculta el menú hamburguesa */
+    display: none; /* Oculta el menú móvil */
   }
 
   .menu-desktop {

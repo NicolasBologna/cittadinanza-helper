@@ -1,0 +1,12 @@
+<div class="graph-item" (click)="toggleBubbles()">
+  <svg class="person-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img">
+    <!-- Fondo del nodo -->
+    <circle cx="50" cy="50" r="48" class="node-background"></circle>
+
+    <!-- Ícono de persona -->
+    <path d="M50,10a20,20,0,1,1-20,20A20,20,0,0,1,50,10Zm-10,45h20c11,0,20,9,20,20v5H20V75C20,64,29,55,40,55Z"
+      class="person-shape"></path>
+  </svg>
+  <app-graph-document [documents]="documents" [visible]="documentsVisible"></app-graph-document>
+
+</div>

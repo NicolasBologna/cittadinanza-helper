@@ -1,0 +1,7 @@
+<div class="bubbles" [class.visible]="visible()">
+  @for (document of documents(); track $index) {
+  <div class="bubble">
+    {{ document }}
+  </div>
+  }
+</div>

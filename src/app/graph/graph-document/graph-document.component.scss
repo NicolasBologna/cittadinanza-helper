@@ -1,0 +1,111 @@
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* No interactuables inicialmente */
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.bubbles .bubble {
+  position: absolute;
+  width: auto;
+  background: #fffdf8; /* Blanco cremoso */
+  color: #4b3a29; /* Marrón oscuro */
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Ocultas por defecto */
+  transform: scale(0.5); /* Tamaño inicial reducido */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Cuando las burbujas son visibles */
+.bubbles.visible .bubble {
+  opacity: 1; /* Aparecen al activarse */
+  transform: scale(1); /* Vuelven a tamaño normal */
+  pointer-events: auto; /* Ahora son interactuables */
+}
+
+/* Distribuir las burbujas en un abanico usando nth-child */
+.bubbles .bubble:nth-child(1) {
+  transform: translate(-80px, -80px) scale(0.5); /* Arriba izquierda */
+}
+
+.bubbles.visible .bubble:nth-child(1) {
+  transform: translate(-80px, -80px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(2) {
+  transform: translate(0px, -100px) scale(0.5); /* Arriba */
+}
+
+.bubbles.visible .bubble:nth-child(2) {
+  transform: translate(0px, -100px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(3) {
+  transform: translate(80px, -80px) scale(0.5); /* Arriba derecha */
+}
+
+.bubbles.visible .bubble:nth-child(3) {
+  transform: translate(80px, -80px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(4) {
+  transform: translate(100px, 0px) scale(0.5); /* Derecha */
+}
+
+.bubbles.visible .bubble:nth-child(4) {
+  transform: translate(100px, 0px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(5) {
+  transform: translate(80px, 80px) scale(0.5); /* Abajo derecha */
+}
+
+.bubbles.visible .bubble:nth-child(5) {
+  transform: translate(80px, 80px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(6) {
+  transform: translate(0px, 100px) scale(0.5); /* Abajo */
+}
+
+.bubbles.visible .bubble:nth-child(6) {
+  transform: translate(0px, 100px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(7) {
+  transform: translate(-80px, 80px) scale(0.5); /* Abajo izquierda */
+}
+
+.bubbles.visible .bubble:nth-child(7) {
+  transform: translate(-80px, 80px) scale(1); /* Tamaño normal al activar */
+}
+
+.bubbles .bubble:nth-child(8) {
+  transform: translate(-100px, 0px) scale(0.5); /* Izquierda */
+}
+
+.bubbles.visible .bubble:nth-child(8) {
+  transform: translate(-100px, 0px) scale(1); /* Tamaño normal al activar */
+}

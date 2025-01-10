@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { EligibilityCalculatorComponent } from './eligibility-calculator/eligibility-calculator.component';
 import { Title } from '@angular/platform-browser';
 import { FloatingFooterComponent } from './floating-footer/floating-footer.component';
-import { AppHeaderComponent } from './app-header/app-header.component';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { HeaderResponsiveComponent } from './header-responsive/header-responsive.component';
 import { ContactFloatComponent } from './contact-float/contact-float.component';
 
@@ -11,7 +9,6 @@ import { ContactFloatComponent } from './contact-float/contact-float.component';
   selector: 'app-root',
   imports: [
     FloatingFooterComponent,
-    AppHeaderComponent,
     RouterOutlet,
     HeaderResponsiveComponent,
     HeaderResponsiveComponent,

@@ -1,0 +1,27 @@
+<div class="graph-container">
+
+  <!-- Primera generación -->
+  <div class="generation">
+    <app-graph-item name="Daniel" title="Papá" [documents]="documentsAvo"></app-graph-item>
+  </div>
+  <svg class="connections">
+    <!-- Línea desde Daniel a Sebastian -->
+    <line x1="150" y1="0" x2="150" y2="150" stroke="#4B3A29" stroke-width="4" />
+    <!-- Agrega más líneas según sea necesario -->
+  </svg>
+
+  <!-- Segunda generación -->
+  <div class="generation">
+    <app-graph-item name="Sebastian" title="Hermano" [documents]="documentsAbuelo"></app-graph-item>
+  </div>
+  <svg class="connections">
+    <!-- Línea desde Daniel a Sebastian -->
+    <line x1="150" y1="0" x2="150" y2="150" stroke="#4B3A29" stroke-width="4" />
+    <!-- Agrega más líneas según sea necesario -->
+  </svg>
+
+  <!-- Tercera generación -->
+  <div class="generation">
+    <app-graph-item name="Aaron" title="Hijo" [documents]="documentsSolicitante"></app-graph-item>
+  </div>
+</div>
