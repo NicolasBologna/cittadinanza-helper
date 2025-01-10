@@ -61,12 +61,12 @@
 .menu-desktop {
   display: flex;
   list-style: none;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0);
   z-index: 1000;
   padding: 10px 0;
   transition: all 0.3s ease; /* Transición suave para el hover */
   gap: 20px;
+  font-size: 1.1rem;
 }
 
 .menu-desktop:hover {
@@ -77,7 +77,7 @@
 
 .menu-desktop li a {
   text-decoration: none;
-  color: #007bff;
+  color: #4b3a29;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px; /* Bordes redondeados */
@@ -85,12 +85,12 @@
 }
 
 .menu-desktop li a:hover {
-  color: #0056b3;
+  color: #c6a87d;
 }
 
 .menu-desktop li a.disabled-link {
   pointer-events: none; /* Hace que no sean clickeables */
-  color: #bbb; /* Color gris claro */
+  color: #b8afa5; /* Color gris claro */
   cursor: not-allowed; /* Cursor de "no permitido" */
   padding: 10px 15px;
   border-radius: 5px;

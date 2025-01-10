@@ -40,9 +40,11 @@ h2 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif; /* Fuente elegante */
+  font-size: 1.3rem; /* Tamaño estándar */
+  color: #333; /* Gris oscuro */
+  line-height: 1.5; /* Mejora la legibilidad */
   margin-bottom: 20px;
-  color: #555;
 }
 
 .options {
@@ -53,21 +55,18 @@ p {
 }
 
 button {
-  font-size: 1rem;
-  padding: 12px 20px;
+  background-color: #4b3a29; /* Marrón oscuro */
+  color: #fffdf8; /* Blanco cremoso */
   border: none;
-  border-radius: 25px;
-  background: linear-gradient(120deg, #007bff, #00b4ff);
-  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background: linear-gradient(120deg, #0056b3, #007bff);
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
-  transform: scale(1.05); /* Zoom suave */
+  background-color: #8a7a5e;
 }
 
 button:active {

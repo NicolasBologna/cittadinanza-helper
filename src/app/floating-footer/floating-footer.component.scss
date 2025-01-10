@@ -1,9 +1,9 @@
 .floating-footer {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   right: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  background: rgba(245, 234, 219);
+  color: #4b3a29;
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -19,9 +19,9 @@
 
 .floating-footer a {
   background: linear-gradient(
-    90deg,
+    120deg,
     #008000,
-    #ffffff,
+    #9a9b9e,
     #ff0000
   ); /* Verde, blanco y rojo */
   -webkit-background-clip: text; /* Aplica el degradado al texto */

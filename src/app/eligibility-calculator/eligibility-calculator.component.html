@@ -5,13 +5,16 @@
     <div class="result">
       <h1>Resultado:</h1>
       <p>{{ eligibilityResult() }}</p>
-      <button (click)="resetCalculator()">Reiniciar</button>
+      <div class="options">
+        <button (click)="resetCalculator()">Contactar un asesor</button>
+        <button (click)="resetCalculator()">Reiniciar</button>  
+      </div>
     </div>
     }
 
     @if (!eligibilityResult()) {
     <div class="question">
-      <h2>{{ questions[currentStep()].text }}</h2>
+      <p>{{ questions[currentStep()].text }}</p>
       <div class="options">
         @for (option of questions[currentStep()].options; track option.label){
         <button (click)="handleAnswer(option.value)">{{ option.label }}</button>
