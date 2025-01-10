@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -8,4 +8,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './app-header.component.html',
   styleUrl: './app-header.component.scss',
 })
-export class AppHeaderComponent {}
+export class AppHeaderComponent {
+  menuOpen = signal(false);
+
+  toggleMenu() {
+    this.menuOpen.update((menu) => !menu);
+  }
+}
