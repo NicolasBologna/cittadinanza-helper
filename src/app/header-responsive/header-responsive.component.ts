@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header-responsive',
-  imports: [],
+  imports: [MatTooltipModule, RouterLink, RouterLinkActive],
   templateUrl: './header-responsive.component.html',
   styleUrl: './header-responsive.component.scss',
 })
