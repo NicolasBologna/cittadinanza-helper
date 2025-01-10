@@ -1,0 +1,21 @@
+<div class="avo-container">
+  <h2>Árbol Genealógico y Documentos Necesarios</h2>
+  <div class="tree-container">
+    @for (member of familyTree; track $index) {
+    <div class="member" (click)="selectMember(member)">
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.relation }}</p>
+    </div>
+    }
+  </div>
+
+  @if(selectedMember()){
+  <div class="documents-container">
+    <h3>Documentos necesarios para {{ selectedMember()?.name }}</h3>
+    <ul>
+      <!-- <li *ngFor="let doc of selectedMember.documents">{{ doc }}</li> -->
+    </ul>
+  </div>
+  }
+
+</div>

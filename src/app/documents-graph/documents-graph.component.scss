@@ -1,0 +1,42 @@
+.avo-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding-top: 400px;
+}
+
+.tree-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.member {
+  background: rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.member:hover {
+  background: rgba(0, 123, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.documents-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.documents-container h3 {
+  color: #007bff;
+}
+
+.documents-container ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
