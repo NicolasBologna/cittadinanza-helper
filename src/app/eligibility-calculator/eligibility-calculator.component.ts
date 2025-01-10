@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { fadeAnimation } from './animations';
 import { CommonModule } from '@angular/common';
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-eligibility-calculator',
@@ -71,6 +72,7 @@ export class EligibilityCalculatorComponent {
     } else if (this.currentStep() < this.questions.length - 1) {
       this.currentStep.update((step) => step + 1);
     } else {
+      this.celebrate();
       this.eligibilityResult.set(
         '¡Felicidades! Pareces ser elegible para la ciudadanía italiana. Consulta los requisitos adicionales.'
       );
@@ -98,5 +100,13 @@ export class EligibilityCalculatorComponent {
     this.currentStep.set(0);
     this.eligibilityResult.set(null);
     this.answers.set({});
+  }
+
+  celebrate() {
+    confetti({
+      particleCount: 2000, // Número de partículas
+      spread: 360, // Ángulo de dispersión
+      origin: { y: 0.6 }, // Posición de origen
+    });
   }
 }
