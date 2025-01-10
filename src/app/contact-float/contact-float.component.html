@@ -1,0 +1,18 @@
+<div class="contact-float">
+  <!-- Botón flotante -->
+  <button class="contact-button" (click)="toggleContactForm()">
+    📞 Ayuda
+  </button>
+
+  <!-- Formulario o enlace flotante -->
+  @if(showContactForm()){
+  <div class="contact-form">
+    <h3>Contacta a un Gestor</h3>
+    <p>Estamos aquí para ayudarte.</p>
+    <a href="https://wa.me/+5493417215835" target="_blank" rel="noopener noreferrer">
+      📲 Enviar Mensaje por WhatsApp
+    </a>
+    <button class="close-button" (click)="toggleContactForm()">✖ Cerrar</button>
+  </div>
+  }
+</div>

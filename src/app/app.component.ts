@@ -5,6 +5,7 @@ import { FloatingFooterComponent } from './floating-footer/floating-footer.compo
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeaderResponsiveComponent } from './header-responsive/header-responsive.component';
+import { ContactFloatComponent } from './contact-float/contact-float.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { HeaderResponsiveComponent } from './header-responsive/header-responsive
     RouterOutlet,
     HeaderResponsiveComponent,
     HeaderResponsiveComponent,
+    ContactFloatComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
