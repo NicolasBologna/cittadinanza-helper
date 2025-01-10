@@ -1,0 +1,79 @@
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.5); /* Fondo blanco translúcido */
+  backdrop-filter: blur(15px); /* Efecto de desenfoque */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+// .calculator {
+//   background: rgba(255, 255, 255, 0.7); /* Blanco translúcido */
+//   border: 1px solid rgba(255, 255, 255, 0.3); /* Bordes finos */
+//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+// }
+
+.calculator:hover {
+  transform: scale(1.02); /* Efecto de zoom suave */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al pasar el mouse */
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+button {
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(120deg, #007bff, #00b4ff);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(120deg, #0056b3, #007bff);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+  transform: scale(1.05); /* Zoom suave */
+}
+
+button:active {
+  transform: scale(0.95); /* Efecto de pulsación */
+}
+
+.result {
+  text-align: center;
+}

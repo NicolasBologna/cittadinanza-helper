@@ -1,0 +1,24 @@
+<div class="calculator-container">
+  <div class="calculator">
+
+    @if (eligibilityResult()) {
+    <div class="result">
+      <h1>Resultado:</h1>
+      <p>{{ eligibilityResult() }}</p>
+      <button (click)="resetCalculator()">Reiniciar</button>
+    </div>
+    }
+
+    @if (!eligibilityResult()) {
+    <div class="question">
+      <h2>{{ questions[currentStep()].text }}</h2>
+      <div class="options">
+        @for (option of questions[currentStep()].options; track option.label){
+        <button (click)="handleAnswer(option.value)">{{ option.label }}</button>
+        }
+      </div>
+    </div>
+    }
+  </div>
+
+</div>

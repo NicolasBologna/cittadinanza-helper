@@ -1,0 +1,6 @@
+.main-content {
+  flex: 1; /* Ocupa el espacio restante debajo del header */
+  display: flex;
+  justify-content: center; /* Centra la calculadora horizontalmente */
+  align-items: center; /* Centra la calculadora verticalmente */
+}
