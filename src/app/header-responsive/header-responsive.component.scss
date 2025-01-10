@@ -5,6 +5,11 @@
   z-index: 1000;
 }
 
+.app-header .menu-desktop {
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -19,9 +24,19 @@
 .hamburger span {
   width: 40px;
   height: 7px;
-  background: linear-gradient(90deg, #008000, #ffffff, #ff0000);
   border-radius: 5px;
   transition: all 0.3s ease;
+}
+
+.red-span {
+  background-color: #ff0000;
+}
+.green-span {
+  background-color: #008000;
+}
+
+.white-span {
+  background-color: #ffffff;
 }
 
 /* Animación del botón al abrir */
@@ -37,9 +52,48 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
-.menu {
+.menu-desktop {
+  display: flex;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+  transition: all 0.3s ease; /* Transición suave para el hover */
+  gap: 20px;
+}
+
+.menu-desktop:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.menu-desktop li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave para hover y clic */
+}
+
+.menu-desktop li a:hover {
+  color: #0056b3;
+}
+
+.menu-desktop li a.disabled-link {
+  pointer-events: none; /* Hace que no sean clickeables */
+  color: #bbb; /* Color gris claro */
+  cursor: not-allowed; /* Cursor de "no permitido" */
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Menú móvil desplegable */
+.menu-mobile {
   position: fixed;
-  top: -100%; /* Oculto fuera de la pantalla */
+  top: -100%;
   left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
@@ -49,11 +103,11 @@
   z-index: 1000;
 }
 
-.menu.open {
-  top: 0; /* Muestra el menú al abrir */
+.menu-mobile.open {
+  top: 0; /* Muestra el menú móvil */
 }
 
-.menu ul {
+.menu-mobile ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -62,10 +116,17 @@
   gap: 15px;
 }
 
-.disabled-link {
-  pointer-events: none;
-  color: #bbb;
-  cursor: not-allowed;
+.menu-mobile li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-mobile li a:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
 }
 
 /* Botón para cerrar */
@@ -110,8 +171,12 @@
     display: flex; /* Muestra el botón hamburguesa */
   }
 
-  .menu {
+  .menu-mobile {
     display: block; /* Muestra el menú desplegable */
+  }
+
+  .menu-desktop {
+    display: none; /* Muestra el menú desplegable */
   }
 }
 
@@ -120,7 +185,11 @@
     display: none; /* Oculta el botón hamburguesa */
   }
 
-  .menu {
+  .menu-mobile {
     display: none; /* Oculta el menú hamburguesa */
+  }
+
+  .menu-desktop {
+    display: flex;
   }
 }

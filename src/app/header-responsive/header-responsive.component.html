@@ -1,12 +1,36 @@
 <header class="app-header">
+  <ul class="menu-desktop">
+    <li><a routerLink="" routerLinkActive="active">¿Puedo ser Ciudadano?</a></li>
+    <li><a routerLink="/documents-graph">Lista de Documentos</a></li>
+    <li matTooltip="Próximamente" matTooltipPosition="below">
+      <a class="disabled-link">
+        Rastreador de Progreso
+      </a>
+    </li>
+    <li matTooltip="Próximamente" matTooltipPosition="below">
+      <a class="disabled-link">
+        Mapa de Consulados
+      </a>
+    </li>
+    <li matTooltip="Próximamente" matTooltipPosition="below">
+      <a class="disabled-link">
+        Guía de Procedimientos
+      </a>
+    </li>
+    <li matTooltip="Próximamente" matTooltipPosition="below">
+      <a class="disabled-link">
+        Calculadora de Costos
+      </a>
+    </li>
+  </ul>
+
   <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen()">
-    <!-- Ícono de menú hamburguesa -->
-    <span></span>
-    <span></span>
-    <span></span>
+    <span class="green-span"></span>
+    <span class="white-span"></span>
+    <span class="red-span"></span>
   </button>
 
-  <ul class="menu" [class.open]="menuOpen()">
+  <ul class="menu-mobile" [class.open]="menuOpen()">
     <button class="close-btn" (click)="closeMenu()">✖</button>
     <li><a routerLink="" routerLinkActive="active">¿Puedo ser Ciudadano?</a></li>
     <li><a routerLink="/documents-graph">Lista de Documentos</a></li>
