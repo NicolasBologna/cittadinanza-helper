@@ -1,6 +1,6 @@
 <header class="app-header">
   <ul class="menu-desktop">
-    <li><a routerLink="" routerLinkActive="active">¿Puedo ser Ciudadano?</a></li>
+    <li><a routerLink="/eligibility" routerLinkActive="active">¿Puedo ser Ciudadano?</a></li>
     <li><a routerLink="/documents-graph">Lista de Documentos</a></li>
     <li matTooltip="Próximamente" matTooltipPosition="below">
       <a class="disabled-link">
@@ -32,7 +32,7 @@
 
   <ul class="menu-mobile" [class.open]="menuOpen()">
     <!-- <button class="close-btn" (click)="closeMenu()">✖</button> -->
-    <li (click)="closeMenu()"><a routerLink="" routerLinkActive="active">¿Puedo ser Ciudadano?</a></li>
+    <li (click)="closeMenu()"><a routerLink="/eligibility" routerLinkActive="active">¿Puedo ser Ciudadano?</a></li>
     <li (click)="closeMenu()"><a routerLink="/documents-graph">Lista de Documentos</a></li>
     <span class="in-progress-message">Proximamente:</span>
     <li (click)="closeMenu()">
